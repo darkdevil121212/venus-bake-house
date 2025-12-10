@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Venus Bake House - Freshly Baked Delights</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts inspired by Glen's Bakehouse style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
                 <div class="logo-icon">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=100&h=100&fit=crop" alt="Cupcake">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=100&h=100&fit=crop" alt="Cupcake" />
                 </div>
-                Venus Bake House
+                <span class="logo-text">Venus Bake House</span>
             </div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
@@ -28,6 +35,7 @@
     <!-- Home Page -->
     <div id="home-page">
         <section class="hero">
+            <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>Welcome to Venus Bake House</h1>
                 <p>Freshly Baked Delights Made with Love</p>
@@ -40,7 +48,7 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop" alt="Fresh Ingredients">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop" alt="Fresh Ingredients" />
                     </div>
                     <div class="product-info">
                         <h3>Fresh Ingredients</h3>
@@ -49,7 +57,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop" alt="Expert Bakers">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop" alt="Expert Bakers" />
                     </div>
                     <div class="product-info">
                         <h3>Expert Bakers</h3>
@@ -58,7 +66,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1599785209796-786432b228bc?w=400&h=300&fit=crop" alt="Made with Love">
+                        <img src="https://images.unsplash.com/photo-1599785209796-786432b228bc?w=400&h=300&fit=crop" alt="Made with Love" />
                     </div>
                     <div class="product-info">
                         <h3>Made with Love</h3>
@@ -76,7 +84,7 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Chocolate Fudge Cake">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Chocolate Fudge Cake" />
                     </div>
                     <div class="product-info">
                         <h3>Chocolate Fudge Cake</h3>
@@ -86,7 +94,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop" alt="Strawberry Delight">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop" alt="Strawberry Delight" />
                     </div>
                     <div class="product-info">
                         <h3>Strawberry Delight</h3>
@@ -96,7 +104,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://plus.unsplash.com/premium_photo-1663839331564-2a43583cea49?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmFuaWxsYSUyMGNha2V8ZW58MHx8MHx8fDA%3D" alt="Vanilla Dream">
+                        <img src="https://plus.unsplash.com/premium_photo-1663839331564-2a43583cea49?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmFuaWxsYSUyMGNha2V8ZW58MHx8MHx8fDA%3D" alt="Vanilla Dream" />
                     </div>
                     <div class="product-info">
                         <h3>Vanilla Dream</h3>
@@ -106,7 +114,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=400&h=300&fit=crop" alt="Carrot Cake">
+                        <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=400&h=300&fit=crop" alt="Carrot Cake" />
                     </div>
                     <div class="product-info">
                         <h3>Carrot Cake</h3>
@@ -116,7 +124,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1519915212116-7cfef71f1d3e?w=400&h=300&fit=crop" alt="Lemon Bliss">
+                        <img src="https://images.unsplash.com/photo-1519915212116-7cfef71f1d3e?w=400&h=300&fit=crop" alt="Lemon Bliss" />
                     </div>
                     <div class="product-info">
                         <h3>Lemon Bliss</h3>
@@ -126,7 +134,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&h=300&fit=crop" alt="Red Velvet">
+                        <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&h=300&fit=crop" alt="Red Velvet" />
                     </div>
                     <div class="product-info">
                         <h3>Red Velvet</h3>
@@ -145,7 +153,7 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop" alt="Butter Croissants">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop" alt="Butter Croissants" />
                     </div>
                     <div class="product-info">
                         <h3>Butter Croissants</h3>
@@ -155,7 +163,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop" alt="Chocolate Chip Cookies">
+                        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop" alt="Chocolate Chip Cookies" />
                     </div>
                     <div class="product-info">
                         <h3>Chocolate Chip Cookies</h3>
@@ -165,7 +173,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop" alt="Garlic Breadsticks">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop" alt="Garlic Breadsticks" />
                     </div>
                     <div class="product-info">
                         <h3>Garlic Breadsticks</h3>
@@ -175,7 +183,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=300&fit=crop" alt="Assorted Muffins">
+                        <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=300&fit=crop" alt="Assorted Muffins" />
                     </div>
                     <div class="product-info">
                         <h3>Assorted Muffins</h3>
@@ -185,7 +193,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop" alt="Danish Pastries">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop" alt="Danish Pastries" />
                     </div>
                     <div class="product-info">
                         <h3>Danish Pastries</h3>
@@ -195,7 +203,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=300&fit=crop" alt="Glazed Donuts">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=300&fit=crop" alt="Glazed Donuts" />
                     </div>
                     <div class="product-info">
                         <h3>Glazed Donuts</h3>
@@ -217,7 +225,7 @@
                         <h3>Contact Information</h3>
                         <div class="contact-item">
                             <strong>📍 Address:</strong>
-                            <span>123 Bakery Lane, Sweet Town, ST 12345</span>
+                            <span>5, Wind Tunnel Rd, Murugeshpalya, K R Garden, Bengaluru, Karnataka 560017</span>
                         </div>
                         <div class="contact-item">
                             <strong>📞 Phone:</strong>
@@ -225,11 +233,11 @@
                         </div>
                         <div class="contact-item">
                             <strong>📧 Email:</strong>
-                            <span>hello@venusbakehouse.com</span>
+                            <span>venusbakehouse@gmaail.com</span>
                         </div>
                         <div class="contact-item">
                             <strong>🕒 Hours:</strong>
-                            <span>Mon-Sat: 8:00 AM - 8:00 PM<br>Sunday: 9:00 AM - 6:00 PM</span>
+                            <span>Mon-Sat: 8:00 AM - 8:00 PM<br />Sunday: 9:00 AM - 6:00 PM</span>
                         </div>
                     </div>
 
@@ -238,11 +246,11 @@
                         <form onsubmit="handleSubmit(event)">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" required>
+                                <input type="text" id="name" required />
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" required>
+                                <input type="email" id="email" required />
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
@@ -260,6 +268,7 @@
         <p>&copy; 2024 Venus Bake House. All rights reserved. | Made with ❤️ and flour</p>
     </footer>
 
+    <!-- External JS -->
     <script src="script.js"></script>
 </body>
 </html>
