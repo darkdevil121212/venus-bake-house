@@ -282,8 +282,6 @@ footer {
     display: none;
 }
 
-/* Responsive Styles */
-
 @media (max-width: 768px) {
     nav {
         padding: 0 1rem;
