@@ -18,12 +18,12 @@ function showPage(page) {
             element.classList.add('hidden');
         }
     });
-
+    
     const targetPage = document.getElementById(page + '-page');
     if (targetPage) {
         targetPage.classList.remove('hidden');
     }
-
+    
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
