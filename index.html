@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venus Bake House - Freshly Baked Delights</title>
+
+    <!-- Fonts inspired by Glen's Bakehouse style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=100&h=100&fit=crop" alt="Cupcake" />
+                </div>
+                <span class="logo-text">Venus Bake House</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="#" onclick="navigateTo('cakes')">Cakes</a></li>
+                <li><a href="#" onclick="navigateTo('snacks')">Snacks</a></li>
+                <li><a href="#" onclick="navigateTo('contact-info')">Contact Info</a></li>
+                <li><a href="#" onclick="navigateTo('contact-form')">Message Us</a></li>
+                <li><a href="#" onclick="navigateTo('cart')" class="cart-link">
+                    🛒 Cart <span class="cart-count" id="cartCount">0</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home-page">
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Welcome to Venus Bake House</h1>
+                <p>Freshly Baked Delights Made with Love</p>
+                <a href="#" class="btn" onclick="showPage('cakes')">Explore Our Menu</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop" alt="Fresh Ingredients" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Ingredients</h3>
+                        <p>We use only the finest, freshest ingredients in all our baked goods.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop" alt="Expert Bakers" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Expert Bakers</h3>
+                        <p>Our experienced bakers craft each item with passion and precision.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1599785209796-786432b228bc?w=400&h=300&fit=crop" alt="Made with Love" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Made with Love</h3>
+                        <p>Every product is baked with care and attention to detail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cakes Page -->
+    <div id="cakes-page" class="hidden">
+        <div class="container">
+            <h2 class="section-title">Our Delicious Cakes</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Chocolate Fudge Cake" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Chocolate Fudge Cake</h3>
+                        <p>Rich, moist chocolate cake with creamy fudge frosting</p>
+                        <div class="product-price">₹650</div>
+                        <button class="btn btn-cart" onclick="addToCart('Chocolate Fudge Cake', 650)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop" alt="Strawberry Delight" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Strawberry Delight</h3>
+                        <p>Light sponge cake with fresh strawberries and cream</p>
+                        <div class="product-price">₹700</div>
+                        <button class="btn btn-cart" onclick="addToCart('Strawberry Delight', 700)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1663839331564-2a43583cea49?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmFuaWxsYSUyMGNha2V8ZW58MHx8MHx8fDA%3D" alt="Vanilla Dream" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Vanilla Dream</h3>
+                        <p>Classic vanilla cake with buttercream frosting</p>
+                        <div class="product-price">₹600</div>
+                        <button class="btn btn-cart" onclick="addToCart('Vanilla Dream', 600)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=400&h=300&fit=crop" alt="Carrot Cake" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Carrot Cake</h3>
+                        <p>Spiced carrot cake with cream cheese frosting</p>
+                        <div class="product-price">₹680</div>
+                        <button class="btn btn-cart" onclick="addToCart('Carrot Cake', 680)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1714942934723-118f2b4dd6dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGVtb24lMjBibGlzcyUyMGNha2V8ZW58MHx8MHx8fDA%3D" alt="Lemon Bliss" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Lemon Bliss</h3>
+                        <p>Tangy lemon cake with zesty lemon glaze</p>
+                        <div class="product-price">₹620</div>
+                        <button class="btn btn-cart" onclick="addToCart('Lemon Bliss', 620)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&h=300&fit=crop" alt="Red Velvet" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Red Velvet</h3>
+                        <p>Smooth red velvet with cream cheese frosting</p>
+                        <div class="product-price">₹750</div>
+                        <button class="btn btn-cart" onclick="addToCart('Red Velvet', 750)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snacks Page -->
+    <div id="snacks-page" class="hidden">
+        <div class="container">
+            <h2 class="section-title">Tasty Snacks</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop" alt="Butter Croissants" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Butter Croissants</h3>
+                        <p>Flaky, buttery French-style croissants</p>
+                        <div class="product-price">₹80</div>
+                        <button class="btn btn-cart" onclick="addToCart('Butter Croissants', 80)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop" alt="Chocolate Chip Cookies" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Chocolate Chip Cookies</h3>
+                        <p>Crispy on the outside, chewy on the inside</p>
+                        <div class="product-price">₹150/dozen</div>
+                        <button class="btn btn-cart" onclick="addToCart('Chocolate Chip Cookies', 150)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop" alt="Garlic Breadsticks" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Garlic Breadsticks</h3>
+                        <p>Crispy breadsticks with aromatic garlic butter</p>
+                        <div class="product-price">₹120</div>
+                        <button class="btn btn-cart" onclick="addToCart('Garlic Breadsticks', 120)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=300&fit=crop" alt="Assorted Muffins" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Assorted Muffins</h3>
+                        <p>Blueberry, banana nut, and chocolate varieties</p>
+                        <div class="product-price">₹60 each</div>
+                        <button class="btn btn-cart" onclick="addToCart('Assorted Muffins', 60)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop" alt="Danish Pastries" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Danish Pastries</h3>
+                        <p>Sweet pastries with fruit and cream fillings</p>
+                        <div class="product-price">₹90</div>
+                        <button class="btn btn-cart" onclick="addToCart('Danish Pastries', 90)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=300&fit=crop" alt="Glazed Donuts" />
+                    </div>
+                    <div class="product-info">
+                        <h3>Glazed Donuts</h3>
+                        <p>Soft, fluffy donuts with sweet glazing</p>
+                        <div class="product-price">₹50 each</div>
+                        <button class="btn btn-cart" onclick="addToCart('Glazed Donuts', 50)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Page -->
+    <div id="cart-page" class="hidden">
+        <div class="container">
+            <h2 class="section-title">Your Shopping Cart</h2>
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems">
+                    <div class="empty-cart">
+                        <p>🛒 Your cart is empty</p>
+                        <a href="#" class="btn" onclick="showPage('cakes')">Start Shopping</a>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (5%):</span>
+                        <span id="tax">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery:</span>
+                        <span id="delivery">₹50</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">₹0</span>
+                    </div>
+                    <button class="btn btn-checkout" onclick="checkout()">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Info Page -->
+    <div id="contact-info-page" class="hidden">
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact Information</h2>
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <div class="contact-info-header">
+                            <h3>📍 Visit Us</h3>
+                        </div>
+                        <div class="contact-item-large">
+                            <p class="contact-label">Address</p>
+                            <p class="contact-value">5, Wind Tunnel Rd, Murugeshpalya, K R Garden, Bengaluru, Karnataka 560017</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-header">
+                            <h3>📞 Call Us</h3>
+                        </div>
+                        <div class="contact-item-large">
+                            <p class="contact-label">Phone</p>
+                            <p class="contact-value">+91 98765 43210</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-header">
+                            <h3>📧 Email Us</h3>
+                        </div>
+                        <div class="contact-item-large">
+                            <p class="contact-label">Email</p>
+                            <p class="contact-value">info@venusbakehouse.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-header">
+                            <h3>🕒 Opening Hours</h3>
+                        </div>
+                        <div class="contact-item-large">
+                            <p class="contact-label">Monday - Saturday</p>
+                            <p class="contact-value">8:00 AM - 8:00 PM</p>
+                            <p class="contact-label" style="margin-top: 1rem;">Sunday</p>
+                            <p class="contact-value">9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <p>Have a question or special request?</p>
+                    <a href="#" class="btn" onclick="navigateTo('contact-form')">Send Us a Message</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Form Page -->
+    <div id="contact-form-page" class="hidden">
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Send Us a Message</h2>
+                <div class="contact-form-wrapper">
+                    <div class="contact-form-intro">
+                        <p>We'd love to hear from you! Whether you have a question about our products, special orders, or anything else, our team is ready to answer all your questions.</p>
+                    </div>
+                    <div class="contact-form">
+                        <form onsubmit="handleSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" />
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" placeholder="What is your inquiry about?" />
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" required placeholder="Tell us more about your inquiry..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-form-footer">
+                        <p>Need immediate assistance? <a href="#" onclick="navigateTo('contact-info')">View our contact information</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Venus Bake House. All rights reserved.</p>
+    </footer>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
